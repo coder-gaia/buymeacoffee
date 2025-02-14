@@ -1,5 +1,3 @@
-
-
 export default function Home() {
   return (
     <section className= "max-w-lg mx-auto text-center">

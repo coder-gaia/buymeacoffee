@@ -11,6 +11,7 @@ export default function Header({session}: {session:Session | null}){
 
   const username = session?.user?.name || ""
   const firstName = parseFullName(username).first
+  //const tmpUsername = session?.user?.email;
 
     return(
         <>
@@ -27,7 +28,7 @@ export default function Header({session}: {session:Session | null}){
             <div className="flex gap-2">
               {session && (
                 <div className="">
-                  <button
+                  <Link href={"/profile"}
                     className="flex items-center gap-2 bg-yellow-300 rounded-full p-1 pr-4"
                   >
                     <Image 
@@ -37,7 +38,7 @@ export default function Header({session}: {session:Session | null}){
                       width={36} 
                       alt="user profile picture"/>
                   <p>{firstName}</p>
-                  </button>
+                  </Link>
                 </div>
               )}
               {!session && (
