@@ -11,15 +11,15 @@ export default async function saveProfile(formData: FormData){
     if(!session) throw "You must be logged in."
     const email = session.user?.email;
 
-    const {username, displayName, bio} = Object.fromEntries(formData);
+    const {username, displayName, bio, coverUrl} = Object.fromEntries(formData);
 
     const profileInfoDoc = await ProfileInfoModel.findOne({email})
 
     if(profileInfoDoc){
-        profileInfoDoc.set({username, displayName, bio});
+        profileInfoDoc.set({username, displayName, bio, coverUrl});
         await profileInfoDoc.save();
     }else{
-        await ProfileInfoModel.create({email, username, displayName, bio})
+        await ProfileInfoModel.create({email, username, displayName, bio, coverUrl})
     }
 
     return true;
