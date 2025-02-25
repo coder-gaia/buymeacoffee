@@ -1,9 +1,9 @@
 import { uploadToS3 } from "@/actions/uploadActions";
-import { faUpload } from "@fortawesome/free-solid-svg-icons";
+import { faPencil, faUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ChangeEvent } from "react";
 
-export default function UploadButton({onUploadComplete}:{onUploadComplete: (url:string) => void}){
+export default function UploadButton({ onUploadComplete }: {onUploadComplete: (url:string) => void}){
 
     const upload  = async (ev:ChangeEvent<HTMLInputElement>) => {
         const target = ev.target as HTMLInputElement;
@@ -17,8 +17,8 @@ export default function UploadButton({onUploadComplete}:{onUploadComplete: (url:
     }
 
     return(
-        <label className="bg-gray-300 p-2 cursor-pointer rounded-lg"> 
-            <FontAwesomeIcon icon={faUpload}/>
+        <label className="bg-white shadow-md shadow-black/30 p-2 cursor-pointer rounded-lg flex gap-1 items-center"> 
+            <FontAwesomeIcon icon={faPencil}/>
             <input type="file" name="coverImage" id="coverImage" onChange={ev => upload(ev)} className="hidden"/>
         </label>
         
