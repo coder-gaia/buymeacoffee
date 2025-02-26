@@ -15,7 +15,7 @@ export default function Header({session}: {session:Session | null}){
 
     return(
         <>
-        <header className="mb-4">
+        <header className="bg-white">
           <div className="flex justify-between max-w-2xl mx-auto px-4 py-4">
             <Link href={'/'} className="inline-flex gap-1 items-center">
             <FontAwesomeIcon icon={faMugHot} className="h-8"/>
