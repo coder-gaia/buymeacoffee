@@ -1,4 +1,4 @@
-'use server'
+'use server';
 import { authOptions } from "@/lib/authOptions";
 import { ProfileInfoModel } from "@/models/ProfileInfo";
 import mongoose from "mongoose";

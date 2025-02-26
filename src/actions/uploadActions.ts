@@ -1,4 +1,4 @@
-'use server'
+'use server';
 
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import uniqid from 'uniqid';

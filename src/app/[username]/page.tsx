@@ -1,4 +1,5 @@
 'use server'
+import DonationForm from "@/components/DonationForm";
 import { ProfileInfo, ProfileInfoModel } from "@/models/ProfileInfo";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -65,7 +66,7 @@ export default async function SingleProfilePage ({params}:Props) {
                     </div>
 
                     <div className="bg-white p-4 rounded-xl shadow-lg">
-                        form for new donations...
+                        <DonationForm />
                     </div>
 
                 </div>
